@@ -1,14 +1,15 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import Fade from 'react-reveal/Fade';
+import React from "react";
+import PropTypes from "prop-types";
+import Fade from "react-reveal/Fade";
 
-import Box from '@pagerland/common/src/components/Box';
-import Container from '@pagerland/common/src/components/Container';
-import Typography from '@pagerland/common/src/components/Typography';
+import Box from "@pagerland/common/src/components/Box";
+import Container from "@pagerland/common/src/components/Container";
+import Typography from "@pagerland/common/src/components/Typography";
 
-import { Img, ImgSlider } from './styled.components';
+import { Img, ImgSlider } from "./styled.components";
 
-import data from '../../data';
+import data from "../../data";
+import { colors } from "../../styles";
 
 const Screenshots = ({
   WrapperProps,
@@ -26,16 +27,29 @@ const Screenshots = ({
     <Container>
       <Box {...CaptionProps}>
         <Fade cascade bottom duration={600}>
-          <Typography {...TitleProps}>{title}</Typography>
+          <Typography
+            {...TitleProps}
+            style={{
+              borderBottom: `2px solid ${colors.primary}`,
+              borderRadius: "50px",
+            }}
+          >
+            {title}
+          </Typography>
           <Typography {...TextProps}>{text}</Typography>
         </Fade>
       </Box>
     </Container>
     <Fade duration={600}>
       <ImgSlider {...SliderProps}>
-        {slider => {
+        {(slider) => {
           return images.map((img, key) => (
-            <Img {...ImgProps} key={key} onClick={() => slider.current.slickGoTo(key)} {...img} />
+            <Img
+              {...ImgProps}
+              key={key}
+              onClick={() => slider.current.slickGoTo(key)}
+              {...img}
+            />
           ));
         }}
       </ImgSlider>
@@ -101,24 +115,25 @@ Screenshots.defaultProps = {
   },
   CaptionProps: {
     textAlign: {
-      _: 'left',
-      lg: 'center',
+      _: "left",
+      lg: "center",
     },
     mb: 4,
     maxWidth: 770,
-    mx: 'auto',
+    mx: "auto",
   },
   TitleProps: {
-    as: 'h2',
-    variant: 'h2',
+    as: "h2",
+    variant: "h2",
+    textAlign: "center",
     mb: {
       _: 3,
       lg: 4,
     },
   },
   TextProps: {
-    variant: 'body1',
-    color: 'gray.1',
+    variant: "body1",
+    color: "gray.1",
   },
   SliderProps: {
     options: {
@@ -133,8 +148,8 @@ Screenshots.defaultProps = {
   },
   ImgProps: {
     width: {
-      _: '256px !important',
-      lg: '375px !important',
+      _: "256px !important",
+      lg: "375px !important",
     },
     mb: 60,
     mx: -20,

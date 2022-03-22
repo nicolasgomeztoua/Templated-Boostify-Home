@@ -1,4 +1,7 @@
-
+import { BagCheckFill } from "@styled-icons/bootstrap/BagCheckFill";
+import { UserClock } from "@styled-icons/fa-solid/UserClock";
+import { CalendarExclamation } from "@styled-icons/boxicons-regular/CalendarExclamation";
+import textToMultiline from "@pagerland/common/src/utils/textToMultiline";
 import background from "./assets/boostify/Horizon.webp";
 import background2x from "./assets/boostify/Horizon2.jpg";
 
@@ -69,5 +72,41 @@ export default {
       children: "Buy Rank Boosting",
     },
   },
-
+  location: {
+    title: textToMultiline`Boosting is in our blood.\n Heres our mileage.`,
+    text:
+      "Integer vulputate turpis nisl, non auctor sapien accumsan semper. Praesent in pulvinar nisl. Nullam turpis sem, commodo vel congue accumsan, finibus ut nulla. Nunc a efficitur massa. Nulla viverra tincidunt felis, vel sodales metus maximus et. Suspendisse potenti. Donec tincidunt leo nisi, vitae rhoncus neque accumsan vitae.",
+    counters: [
+      {
+        IconProps: {
+          icon: BagCheckFill,
+        },
+        title: "Boosts completed",
+        counter: {
+          value: 6700,
+          unit: "",
+        },
+      },
+      {
+        IconProps: {
+          icon: UserClock,
+        },
+        title: "Orders queued",
+        counter: {
+          value: 8,
+          unit: "",
+        },
+      },
+      {
+        IconProps: {
+          icon: CalendarExclamation,
+        },
+        title: "Shopping Centre",
+        counter: {
+          value: 12,
+          unit: "km",
+        },
+      },
+    ],
+  },
 };

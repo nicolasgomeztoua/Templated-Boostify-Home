@@ -4,8 +4,16 @@ import PropTypes from "prop-types";
 import Head from "next/head";
 
 import Theme, { theme } from "@pagerland/themes/src/RealEstate";
-import { Navbar, Welcome } from "@pagerland/themes/src/RealEstate/containers";
-import { About, Features } from "@pagerland/themes/src/MobileApp/containers";
+import {
+  Location,
+  Navbar,
+  Welcome,
+} from "@pagerland/themes/src/RealEstate/containers";
+import {
+  About,
+  Features,
+  Screenshots,
+} from "@pagerland/themes/src/MobileApp/containers";
 import preview from "@pagerland/themes/src/RealEstate/assets/preview.jpg";
 
 import SEO from "../components/SEO";
@@ -22,7 +30,10 @@ const RealEstate = ({ url }) => (
     <Navbar />
     <Welcome name="welcome" />
     <About name="about" />
-    <Features />
+
+    <Features name="features" />
+    <Screenshots name="screenshots" />
+    <Location name="location" />
   </Theme>
 );
 

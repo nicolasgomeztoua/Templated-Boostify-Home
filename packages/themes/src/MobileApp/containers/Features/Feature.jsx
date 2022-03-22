@@ -14,6 +14,7 @@ import Img from "@pagerland/common/src/components/Img";
 import Icon from "@pagerland/common/src/components/Icon";
 
 import { CardsGrid } from "./styled.components";
+import Link from "next/link";
 
 const Feature = ({
   ContainerProps,
@@ -94,11 +95,14 @@ const Feature = ({
           <CardsGrid {...CardGridProps}>
             {feature.list.map((item, i) => (
               <Fade key={i} top duration={600} delay={i * 100}>
-                <Card {...CardProps} key={i}>
-                  <Icon {...CardIconProps} {...item.IconProps} />
-                  <Typography {...CardTitleProps}>{item.title}</Typography>
-                  <Typography {...CardTextProps}>{item.text}</Typography>
-                </Card>
+                <Link href={item.href} passHref>
+                  <Card {...CardProps} key={i}>
+                    <Icon {...CardIconProps} {...item.IconProps} />
+
+                    <Typography {...CardTitleProps}>{item.title}</Typography>
+                    <Typography {...CardTextProps}>{item.text}</Typography>
+                  </Card>
+                </Link>
               </Fade>
             ))}
           </CardsGrid>
@@ -286,6 +290,7 @@ Feature.defaultProps = {
   TitleProps: {
     as: "h2",
     variant: "h2",
+
     mb: {
       _: 3,
       lg: 4,

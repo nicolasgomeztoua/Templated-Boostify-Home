@@ -1,11 +1,3 @@
-import FacebookF from "@pagerland/icons/src/line/FacebookF";
-import Instagram from "@pagerland/icons/src/line/Instagram";
-import Youtube from "@pagerland/icons/src/line/Youtube";
-
-import CheckCircle from "@pagerland/icons/src/line/CheckCircle";
-import Gift from "@pagerland/icons/src/line/Gift";
-import Coffee from "@pagerland/icons/src/line/Coffee";
-
 import { VpnLock } from "@styled-icons/material/VpnLock";
 import { CommentLightning } from "@styled-icons/fluentui-system-regular/CommentLightning";
 import { InfoSquareFill } from "@styled-icons/bootstrap/InfoSquareFill";
@@ -16,24 +8,31 @@ import { Timer } from "@styled-icons/boxicons-regular/Timer";
 import secondFuture from "./assets/screenshots/AshHome.png";
 import thirdFuture from "./assets/third-feature.svg";
 
-import Phone1 from "./assets/screenshots/Phone-1.png";
-import Phone1x2 from "./assets/screenshots/Phone-1@2x.png";
-import Phone2 from "./assets/screenshots/Phone-2.png";
-import Phone2x2 from "./assets/screenshots/Phone-2@2x.png";
-import Phone3 from "./assets/screenshots/Phone-3.png";
-import Phone3x2 from "./assets/screenshots/Phone-3@2x.png";
-import Phone4 from "./assets/screenshots/Phone-4.png";
-import Phone4x2 from "./assets/screenshots/Phone-4@2x.png";
-import Phone5 from "./assets/screenshots/Phone-5.png";
-import Phone5x2 from "./assets/screenshots/Phone-5@2x.png";
-import Phone6 from "./assets/screenshots/Phone-6.png";
-import Phone6x2 from "./assets/screenshots/Phone-6@2x.png";
 import octaneHome from "./assets/screenshots/octaneHome.png";
 import male from "./assets/clients/photo-male.jpg";
 import malex2 from "./assets/clients/photo-male@2x.jpg";
 import female from "./assets/clients/photo-female.jpg";
 import femalex2 from "./assets/clients/photo-female@2x.jpg";
 import { colors } from "./styles";
+import pic1 from "./assets/screenshots/pic 1.png";
+import pic2 from "./assets/screenshots/pic 2.png";
+import pic3 from "./assets/screenshots/pic 3.png";
+import pic4 from "./assets/screenshots/pic 4.png";
+import pic5 from "./assets/screenshots/pic 5.png";
+import pic6 from "./assets/screenshots/pic 6.png";
+import pic7 from "./assets/screenshots/pic 7.png";
+import pic8 from "./assets/screenshots/pic 8.png";
+import pic9 from "./assets/screenshots/pic 9.png";
+import pic10 from "./assets/screenshots/pic 10.png";
+import pic11 from "./assets/screenshots/pic 11.png";
+import pic12 from "./assets/screenshots/pic 12.png";
+import pic13 from "./assets/screenshots/pic 13.png";
+import pic14 from "./assets/screenshots/pic 14.png";
+import pic15 from "./assets/screenshots/pic 15.png";
+import pic16 from "./assets/screenshots/pic 16.png";
+
+import ArenasBoostLogo from "./components/Logo/ArenasBoost";
+import KillsBoostLogo from "./components/Logo/KillsBoost";
 
 export default {
   title: "Mobile App",
@@ -145,39 +144,31 @@ export default {
           text:
             "We understand that not all players can afford to spend the time for that 20 kill or 4K damage match, or the tens of badges available in Apex. This is why we take pride in our pros and their extremley fast delivery of any badge boosting needs. ",
         },
-        {
-          IconProps: {
-            icon: CheckCircle,
-            gradient: "quaternary",
-          },
-          title: "And just one more",
-          text:
-            "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris vel vehicula dui.",
-        },
       ],
     },
     {
-      title: "Another features section",
-      text:
-        "Ut commodo suscipit neque vitae suscipit. Mauris congue viverra dolor, vel lobortis elit venenatis vel. Nunc non orci ut mi semper aliquet. Nullam vitae tortor faucibus, vehicula lorem in, convallis mi. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce quis vestibulum neque.",
+      title: "Checkout our other Services",
+
       list: [
         {
           IconProps: {
-            icon: Gift,
+            icon: ArenasBoostLogo,
             gradient: "primary",
           },
-          title: "Features subheading",
+          title: "Arenas Boost",
+          href: "/Arenas-Boost",
           text:
-            "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris vel vehicula dui.",
+            "Get the Arenas Points boost you need to acheive the rank you desire.",
         },
         {
           IconProps: {
-            icon: Coffee,
+            icon: KillsBoostLogo,
             gradient: "tertiary",
           },
-          title: "And just one more",
+          title: "Kills Boost",
+          href: "/acheivement-badges",
           text:
-            "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris vel vehicula dui.",
+            "Deck out your banner with a high kill count! Get your desired kills with our killsboost service.",
         },
       ],
     },
@@ -223,38 +214,87 @@ export default {
     },
   ],
   screenshots: {
-    title: "Screenshots",
-    text:
-      "Ut commodo suscipit neque vitae suscipit. Mauris congue viverra dolor, vel lobortis elit venenatis vel. Nunc non orci ut mi semper aliquet. Nullam vitae tortor faucibus, vehicula lorem in, convallis mi.",
+    title: "Recently Delivered Orders",
+    text: "Checkout pics from recent customers!",
     images: [
       {
-        src: Phone1,
-        srcSet: `${Phone1} 1x, ${Phone1x2} 2x`,
+        src: pic1,
+        srcSet: `${pic1} 1x, ${pic1} 2x`,
         alt: "Phone 1",
       },
       {
-        src: Phone2,
-        srcSet: `${Phone2} 1x, ${Phone2x2} 2x`,
+        src: pic2,
+        srcSet: `${pic2} 1x, ${pic2} 2x`,
         alt: "Phone 2",
       },
       {
-        src: Phone3,
-        srcSet: `${Phone3} 1x, ${Phone3x2} 2x`,
+        src: pic3,
+        srcSet: `${pic3} 1x, ${pic3} 2x`,
         alt: "Phone 3",
       },
       {
-        src: Phone4,
-        srcSet: `${Phone4} 1x, ${Phone4x2} 2x`,
+        src: pic4,
+        srcSet: `${pic4} 1x, ${pic4} 2x`,
         alt: "Phone 4",
       },
       {
-        src: Phone5,
-        srcSet: `${Phone5} 1x, ${Phone5x2} 2x`,
+        src: pic5,
+        srcSet: `${pic5} 1x, ${pic5} 2x`,
         alt: "Phone 5",
       },
       {
-        src: Phone6,
-        srcSet: `${Phone6} 1x, ${Phone6x2} 2x`,
+        src: pic6,
+        srcSet: `${pic6} 1x, ${pic6} 2x`,
+        alt: "Phone 6",
+      },
+      {
+        src: pic7,
+        srcSet: `${pic7} 1x, ${pic7} 2x`,
+        alt: "Phone 6",
+      },
+      {
+        src: pic8,
+        srcSet: `${pic8} 1x, ${pic8} 2x`,
+        alt: "Phone 6",
+      },
+      {
+        src: pic9,
+        srcSet: `${pic9} 1x, ${pic9} 2x`,
+        alt: "Phone 6",
+      },
+      {
+        src: pic10,
+        srcSet: `${pic10} 1x, ${pic10} 2x`,
+        alt: "Phone 6",
+      },
+      {
+        src: pic11,
+        srcSet: `${pic11} 1x, ${pic11} 2x`,
+        alt: "Phone 6",
+      },
+      {
+        src: pic12,
+        srcSet: `${pic12} 1x, ${pic12} 2x`,
+        alt: "Phone 6",
+      },
+      {
+        src: pic13,
+        srcSet: `${pic13} 1x, ${pic13} 2x`,
+        alt: "Phone 6",
+      },
+      {
+        src: pic14,
+        srcSet: `${pic14} 1x, ${pic14} 2x`,
+        alt: "Phone 6",
+      },
+      {
+        src: pic15,
+        srcSet: `${pic15} 1x, ${pic15} 2x`,
+        alt: "Phone 6",
+      },
+      {
+        src: pic14,
+        srcSet: `${pic16} 1x, ${pic16} 2x`,
         alt: "Phone 6",
       },
     ],

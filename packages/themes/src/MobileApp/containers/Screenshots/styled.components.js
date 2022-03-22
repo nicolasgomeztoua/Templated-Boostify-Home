@@ -1,8 +1,8 @@
 import styled from 'styled-components';
-import { transition } from '../../styles';
 
 import Slider from '@pagerland/common/src/components/Slider';
 import BaseImg from '@pagerland/common/src/components/Img';
+import { transition } from '../../styles';
 
 export const ImgSlider = styled(Slider)`
   .slick-list {

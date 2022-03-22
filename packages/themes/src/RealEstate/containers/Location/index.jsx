@@ -1,45 +1,38 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import Fade from 'react-reveal/Fade';
-import CountUp from 'react-countup';
-import { Marker } from '@react-google-maps/api';
+import React from "react";
+import PropTypes from "prop-types";
+import Fade from "react-reveal/Fade";
+import CountUp from "react-countup";
 
-import Box from '@pagerland/common/src/components/Box';
-import Container from '@pagerland/common/src/components/Container';
-import Icon from '@pagerland/common/src/components/Icon';
-import Typography from '@pagerland/common/src/components/Typography';
-import Grid from '@pagerland/common/src/components/Grid';
-import GoogleMaps from '@pagerland/common/src/components/GoogleMaps';
+import Box from "@pagerland/common/src/components/Box";
+import Container from "@pagerland/common/src/components/Container";
+import Icon from "@pagerland/common/src/components/Icon";
+import Typography from "@pagerland/common/src/components/Typography";
+import Grid from "@pagerland/common/src/components/Grid";
 
-import data from '../../data';
-import { googleMapsStyle } from '../../styles';
-import Pin from '../../assets/Pin.svg';
+import data from "../../data";
+import { googleMapsStyle } from "../../styles";
 
 const Location = ({
   name,
   title,
-  text,
-  map,
   counters,
   WrapperProps,
   ContainerProps,
   CaptionProps,
   TitleProps,
-  TextProps,
+
   CountersWrapperProps,
   CountersGridProps,
   CounterProps,
   CounterIconProps,
   CounterValueProps,
   CounterTitleProps,
-  GoogleMapsProps,
 }) => (
   <Box name={name} {...WrapperProps}>
     <Container {...ContainerProps}>
       <Box {...CaptionProps}>
         <Fade bottom cascade duration={600}>
           <Typography {...TitleProps}>{title}</Typography>
-          <Typography {...TextProps}>{text}</Typography>
         </Fade>
       </Box>
     </Container>
@@ -55,7 +48,9 @@ const Location = ({
                     <CountUp end={counter.counter.value} />
                     {counter.counter.unit}
                   </Typography>
-                  <Typography {...CounterTitleProps}>{counter.title}</Typography>
+                  <Typography {...CounterTitleProps}>
+                    {counter.title}
+                  </Typography>
                 </div>
               </Box>
             </Fade>
@@ -63,9 +58,6 @@ const Location = ({
         </Grid>
       </Container>
     </Box>
-    <GoogleMaps {...GoogleMapsProps} center={map.cords}>
-      <Marker icon={Pin} position={map.cords} />
-    </GoogleMaps>
   </Box>
 );
 
@@ -82,7 +74,7 @@ Location.propTypes = {
         value: PropTypes.number.isRequired,
         unit: PropTypes.node,
       }),
-    }),
+    })
   ),
   map: PropTypes.shape({
     cords: PropTypes.shape({
@@ -108,24 +100,24 @@ Location.propTypes = {
 
 Location.defaultProps = {
   WrapperProps: {
-    overflow: 'hidden',
+    overflow: "hidden",
     pt: 80,
     pb: 0,
   },
   CaptionProps: {
     maxWidth: 736,
-    mx: 'auto',
+    mx: "auto",
   },
   TitleProps: {
-    accent: 'after',
-    as: 'h2',
-    variant: 'h2',
+    accent: "after",
+    as: "h2",
+    variant: "h2",
     mb: 4,
   },
   TextProps: {
-    variant: 'body1',
+    variant: "body1",
     mb: 110,
-    color: 'gray.1',
+    color: "gray.1",
   },
   CountersWrapperProps: {
     py: {
@@ -133,35 +125,38 @@ Location.defaultProps = {
       md: 64,
       lg: 160,
     },
-    bg: 'gray.0',
+    bg: "white.0",
   },
   CountersGridProps: {
-    maxWidth: 950,
-    mx: 'auto',
+    maxWidth: "90vw",
+    mx: "auto",
     gridTemplateColumns: {
-      _: 'repeat(2, 1fr)',
-      md: 'repeat(4, 1fr)',
+      _: "repeat(3, 1fr)",
+      md: "repeat(3, 1fr)",
     },
     gridGap: {
-      _: '32px',
-      lg: '64px',
+      _: "32px",
+      lg: "64px",
     },
   },
   CounterProps: {
     flexBox: true,
+    justifyContent: "center",
     flexDirection: {
-      _: 'column',
-      lg: 'row',
+      _: "column",
+      lg: "row",
     },
-    alignItems: 'center',
+    alignItems: "center",
     textAlign: {
-      _: 'center',
-      lg: 'left',
+      _: "center",
+      lg: "left",
     },
   },
   CounterIconProps: {
     fontSize: 48,
-    color: 'brand',
+    color: "brand",
+    marginTop: "100px",
+    height: "45px",
     mr: {
       _: 0,
       lg: 3,
@@ -172,17 +167,17 @@ Location.defaultProps = {
     },
   },
   CounterValueProps: {
-    variant: 'h3',
-    color: 'gray.6',
+    variant: "h2",
+    color: "black.6",
   },
   CounterTitleProps: {
-    color: 'gray.2',
-    variant: 'h4',
+    color: "black.2",
+    variant: "h4",
     mt: -7,
   },
   GoogleMapsProps: {
     mapContainerStyle: {
-      width: '100%',
+      width: "100%",
       height: 480,
     },
     zoom: 13,

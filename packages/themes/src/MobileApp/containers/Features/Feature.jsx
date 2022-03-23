@@ -13,8 +13,9 @@ import List from "@pagerland/common/src/components/List";
 import Img from "@pagerland/common/src/components/Img";
 import Icon from "@pagerland/common/src/components/Icon";
 
-import { CardsGrid } from "./styled.components";
 import Link from "next/link";
+import Button from "@pagerland/common/src/components/Button";
+import { CardsGrid } from "./styled.components";
 
 const Feature = ({
   ContainerProps,
@@ -89,20 +90,32 @@ const Feature = ({
                   </Box>
                 </List.Item>
               ))}
+              <Link href={feature.CtaTo} passHref>
+                <div style={{ display: "flex", justifyContent: "center" }}>
+                  <Button variant="brand" size="large">
+                    {feature.CtaText}
+                  </Button>
+                </div>
+              </Link>
             </List>
           ))}
         {useCards && (
           <CardsGrid {...CardGridProps}>
             {feature.list.map((item, i) => (
               <Fade key={i} top duration={600} delay={i * 100}>
-                <Link href={item.href} passHref>
-                  <Card {...CardProps} key={i}>
-                    <Icon {...CardIconProps} {...item.IconProps} />
+                <Card {...CardProps} key={i}>
+                  <Icon {...CardIconProps} {...item.IconProps} />
 
-                    <Typography {...CardTitleProps}>{item.title}</Typography>
-                    <Typography {...CardTextProps}>{item.text}</Typography>
-                  </Card>
-                </Link>
+                  <Typography {...CardTitleProps}>{item.title}</Typography>
+                  <Typography {...CardTextProps}>{item.text}</Typography>
+                  <Link href={item.CtaTo} passHref>
+                    <div style={{ margin: "25px 0px" }}>
+                      <Button variant="brand" size="large">
+                        {item.CtaText}
+                      </Button>
+                    </div>
+                  </Link>
+                </Card>
               </Fade>
             ))}
           </CardsGrid>
@@ -134,6 +147,10 @@ Feature.propTypes = {
     /**
      * Short description of feature
      */
+
+    CtaText: PropTypes.node,
+    CtaTo: PropTypes.node,
+
     text: PropTypes.node,
     /**
      * Additional list of sub-features

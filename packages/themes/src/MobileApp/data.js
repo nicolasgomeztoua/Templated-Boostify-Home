@@ -6,8 +6,7 @@ import { AngleDoubleUp } from "@styled-icons/fa-solid/AngleDoubleUp";
 import { Badge } from "@styled-icons/open-iconic/Badge";
 import { Timer } from "@styled-icons/boxicons-regular/Timer";
 import secondFuture from "./assets/screenshots/AshHome.png";
-import thirdFuture from "./assets/third-feature.svg";
-
+import FAQPathy from "./assets/FAQPathy.png";
 import octaneHome from "./assets/screenshots/octaneHome.png";
 import male from "./assets/clients/photo-male.jpg";
 import malex2 from "./assets/clients/photo-male@2x.jpg";
@@ -93,7 +92,12 @@ export default {
         src: octaneHome,
         style: { display: "flex", alignItems: "center" },
       },
+
       title: "What is Apex Legends Ranked Boosting?",
+
+      CtaTo: "/rank-boosting",
+      CtaText: "Buy Apex Legends Rank Boosting",
+
       text:
         "In Ranked you drop against 19 other teams. You earn RP (Ranked Points) for successful matches and you climb up in Ranked. Your highest tier is shown to friends and other players, determening your prestige. Ranked Boosting is the best way to get your rank. We will grind on your account or one of our pros will squad up with you!",
       list: [
@@ -123,6 +127,8 @@ export default {
         style: { display: "flex", alignItems: "center" },
       },
       title: "What is Badge Boosting?",
+      CtaTo: "/acheivement-badges",
+      CtaText: "Buy Apex Legends Badge Boosting",
       text:
         "In Apex Legends, exceptional achievements are rewarded with badges to illustrate on your banner. Plant fear into your enemies before the match even starts with our badge boosting service! Choose from any of the of badges available in our badge boosting section and our pros will hop on and shred.",
       list: [
@@ -156,7 +162,8 @@ export default {
             gradient: "primary",
           },
           title: "Arenas Boost",
-          href: "/Arenas-Boost",
+          CtaTo: "/Arenas-Boost",
+          CtaText: "Buy Apex Legends Arenas Boosting",
           text:
             "Get the Arenas Points boost you need to acheive the rank you desire.",
         },
@@ -166,51 +173,20 @@ export default {
             gradient: "tertiary",
           },
           title: "Kills Boost",
-          href: "/acheivement-badges",
+          CtaTo: "/kills-boosting",
+          CtaText: "Buy Apex Legends Kills Boosting",
+
           text:
             "Deck out your banner with a high kill count! Get your desired kills with our killsboost service.",
         },
       ],
     },
     {
-      ImageProps: {
-        src: thirdFuture,
-      },
+      ImageProps: {},
       title: "More amazing features",
       text:
         "Ut commodo suscipit neque vitae suscipit. Mauris congue viverra dolor, vel lobortis elit venenatis vel. Nunc non orci ut mi semper aliquet. Nullam vitae tortor faucibus, vehicula lorem in, convallis mi.",
-      list: [
-        {
-          title: "Features subheading",
-          text:
-            "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris vel vehicula dui.",
-        },
-        {
-          title: "Another features subheading",
-          text:
-            "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris vel vehicula dui.",
-        },
-        {
-          title: "And just one more",
-          text:
-            "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris vel vehicula dui.",
-        },
-        {
-          title: "Features subheading",
-          text:
-            "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris vel vehicula dui.",
-        },
-        {
-          title: "Another features subheading",
-          text:
-            "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris vel vehicula dui.",
-        },
-        {
-          title: "And just one more",
-          text:
-            "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris vel vehicula dui.",
-        },
-      ],
+      list: [],
     },
   ],
   screenshots: {
@@ -322,6 +298,7 @@ export default {
   },
   faq: {
     title: "Do you have any questions?",
+    image: FAQPathy,
     text:
       "Ut commodo suscipit neque vitae suscipit. Mauris congue viverra dolor, vel lobortis elit venenatis vel. Nunc non orci ut mi semper aliquet. Nullam vitae tortor faucibus, vehicula lorem in, convallis mi.",
     options: [

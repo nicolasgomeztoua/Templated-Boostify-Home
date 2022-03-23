@@ -1,26 +1,28 @@
-import React from 'react';
-import PropTypes from 'prop-types';
+import React from "react";
+import PropTypes from "prop-types";
 
-import Fade from 'react-reveal/Fade';
-import Reveal from 'react-reveal/Reveal';
+import Fade from "react-reveal/Fade";
+import Reveal from "react-reveal/Reveal";
 
-import Plus from '@pagerland/icons/src/line/Plus';
-import Minus from '@pagerland/icons/src/line/Minus';
+import Plus from "@pagerland/icons/src/line/Plus";
+import Minus from "@pagerland/icons/src/line/Minus";
 
-import Box from '@pagerland/common/src/components/Box';
-import Container from '@pagerland/common/src/components/Container';
-import Typography from '@pagerland/common/src/components/Typography';
-import Accordion from '@pagerland/common/src/components/Accordion';
-import Card from '@pagerland/common/src/components/Card';
-import Icon from '@pagerland/common/src/components/Icon';
+import Box from "@pagerland/common/src/components/Box";
+import Container from "@pagerland/common/src/components/Container";
+import Typography from "@pagerland/common/src/components/Typography";
+import Accordion from "@pagerland/common/src/components/Accordion";
+import Card from "@pagerland/common/src/components/Card";
+import Icon from "@pagerland/common/src/components/Icon";
 
-import Liquid from '../../components/Liquids/C';
+import Img from "@pagerland/common/src/components/Img";
 
-import data from '../../data';
+
+import data from "../../data";
 
 const FAQ = ({
   name,
   title,
+  image,
   text,
   options,
   WrapperProps,
@@ -38,9 +40,9 @@ const FAQ = ({
   <Box {...WrapperProps}>
     <Container {...ContainerProps} name={name}>
       <Box {...InnerProps}>
-        <Box {...LiquidProps}>
+        <Box {...LiquidProps} >
           <Reveal ssrReveal ssrFadeout effect="liquid" duration={600}>
-            <Liquid width={977} height={800} />
+            <Img alt={title} src={image} />
           </Reveal>
         </Box>
         <Fade bottom cascade duration={600}>
@@ -52,11 +54,18 @@ const FAQ = ({
             <Fade bottom duration={600} delay={key * 100}>
               <Card as="button" onClick={onSelect} {...AccordionItemProps}>
                 <Box flexBox>
-                  <Icon icon={isSelected ? Minus : Plus} {...AccordionItemIconProps} />
+                  <Icon
+                    icon={isSelected ? Minus : Plus}
+                    {...AccordionItemIconProps}
+                  />
                   <div>
-                    <Typography {...AccordionItemTitleProps}>{option.title}</Typography>
+                    <Typography {...AccordionItemTitleProps}>
+                      {option.title}
+                    </Typography>
                     <Fade duration={600} collapse when={isSelected}>
-                      <Typography {...AccordionItemTextProps}>{option.text}</Typography>
+                      <Typography {...AccordionItemTextProps}>
+                        {option.text}
+                      </Typography>
                     </Fade>
                   </div>
                 </Box>
@@ -79,6 +88,8 @@ FAQ.propTypes = {
   /**
    * Title text
    */
+  image: PropTypes.node,
+
   title: PropTypes.node,
   /**
    * Main content text
@@ -97,7 +108,7 @@ FAQ.propTypes = {
        * Option text
        */
       text: PropTypes.node,
-    }),
+    })
   ),
   /**
    * Main wrapper props
@@ -157,7 +168,7 @@ FAQ.propTypes = {
 
 FAQ.defaultProps = {
   WrapperProps: {
-    overflow: 'hidden',
+    overflow: "hidden",
     mt: -30,
     pt: 30,
     pb: 60,
@@ -170,26 +181,26 @@ FAQ.defaultProps = {
     },
   },
   InnerProps: {
-    position: 'relative',
+    position: "relative",
     maxWidth: 770,
     mb: 50,
   },
   LiquidProps: {
-    position: 'absolute',
-    top: -112,
+    position: "absolute",
+    top: 112,
     left: `calc(100% + 35px)`,
   },
   TitleProps: {
-    as: 'h2',
-    variant: 'h2',
+    as: "h2",
+    variant: "h2",
     mb: {
       _: 3,
       lg: 4,
     },
   },
   TextProps: {
-    variant: 'body1',
-    color: 'gray.1',
+    variant: "body1",
+    color: "gray.1",
   },
   AccordionProps: {
     mt: {
@@ -199,13 +210,13 @@ FAQ.defaultProps = {
   },
   AccordionItemIconProps: {
     fontSize: 24,
-    gradient: 'quaternary',
+    gradient: "quaternary",
     lineHeight: 1,
     mr: 3,
-    mt: '2px',
+    mt: "2px",
     display: {
-      _: 'none',
-      md: 'block',
+      _: "none",
+      md: "block",
     },
   },
   AccordionItemProps: {
@@ -213,11 +224,11 @@ FAQ.defaultProps = {
     mb: 1,
   },
   AccordionItemTitleProps: {
-    variant: 'h4',
-    color: 'gray.0',
+    variant: "h4",
+    color: "gray.0",
   },
   AccordionItemTextProps: {
-    color: 'gray.1',
+    color: "gray.1",
     py: 3,
     pr: 3,
   },

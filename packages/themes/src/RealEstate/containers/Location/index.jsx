@@ -45,7 +45,7 @@ const Location = ({
                 <Icon {...CounterIconProps} {...counter.IconProps} />
                 <div>
                   <Typography {...CounterValueProps}>
-                    <CountUp end={counter.counter.value} />
+                    <CountUp duration={9} end={counter.counter.value} />
                     {counter.counter.unit}
                   </Typography>
                   <Typography {...CounterTitleProps}>

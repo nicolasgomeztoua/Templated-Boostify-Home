@@ -11,12 +11,15 @@ import {
 } from "@pagerland/themes/src/RealEstate/containers";
 import {
   About,
+  FAQ,
   Features,
   Screenshots,
 } from "@pagerland/themes/src/MobileApp/containers";
 import preview from "@pagerland/themes/src/RealEstate/assets/preview.jpg";
 
+import Team from "@pagerland/themes/src/Corporate/containers/Team";
 import SEO from "../components/SEO";
+import Offer from "@pagerland/themes/src/Corporate/containers/Offer";
 
 const RealEstate = ({ url }) => (
   <Theme>
@@ -34,6 +37,9 @@ const RealEstate = ({ url }) => (
     <Features name="features" />
     <Screenshots name="screenshots" />
     <Location name="location" />
+    <Team name="team" />
+    <FAQ name="faq" />
+    <Offer name="offer" />
   </Theme>
 );
 

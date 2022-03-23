@@ -5,6 +5,14 @@ import textToMultiline from "@pagerland/common/src/utils/textToMultiline";
 import background from "./assets/boostify/Horizon.webp";
 import background2x from "./assets/boostify/Horizon2.jpg";
 
+const now = new Date().getTime();
+const countDate = new Date("apr 05 2022 18:00");
+const gap = countDate - now;
+const second = 1000;
+const minute = second * 60;
+const hour = minute * 60;
+const day = hour * 24;
+const timeLeft = Math.floor(gap / day);
 export default {
   title: "Real Estate",
   navbar: {
@@ -101,10 +109,10 @@ export default {
         IconProps: {
           icon: CalendarExclamation,
         },
-        title: "Shopping Centre",
+        title: "Days Left In Split",
         counter: {
-          value: 12,
-          unit: "km",
+          value: timeLeft,
+          unit: "",
         },
       },
     ],

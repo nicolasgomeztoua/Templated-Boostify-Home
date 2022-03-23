@@ -9,6 +9,7 @@ import booster4 from "./assets/avatars/booster4.webp";
 import Consulting from './assets/consulting.svg';
 import Auditing from './assets/auditing.svg';
 import Strategy from './assets/strategy.svg';
+
 export default {
   title: "Corporate",
   navbar: {

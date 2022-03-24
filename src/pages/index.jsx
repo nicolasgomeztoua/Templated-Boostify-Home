@@ -39,7 +39,7 @@ const RealEstate = ({ url }) => (
     <Features name="features" />
     <Team name="team" />
     <Screenshots name="screenshots" />
-   <FAQ name="faq" />
+    <FAQ name="faq" style={{ marginTop: "50px" }} />
   </Theme>
 );
 

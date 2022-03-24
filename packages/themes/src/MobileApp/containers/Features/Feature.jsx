@@ -76,7 +76,11 @@ const Feature = ({
                   <Box flexBox>
                     {item.IconProps && (
                       <Fade right duration={600}>
-                        <Icon {...ListIconProps} {...item.IconProps} />
+                        <div
+                          style={{ display: "flex", justifyContent: "center" }}
+                        >
+                          <Icon {...ListIconProps} {...item.IconProps} />
+                        </div>
                       </Fade>
                     )}
                     <Box>
@@ -92,7 +96,7 @@ const Feature = ({
               ))}
               <Link href={feature.CtaTo} passHref>
                 <div style={{ display: "flex", justifyContent: "center" }}>
-                  <Button variant="brand" size="large">
+                  <Button variant="brand" size="medium">
                     {feature.CtaText}
                   </Button>
                 </div>
@@ -104,12 +108,20 @@ const Feature = ({
             {feature.list.map((item, i) => (
               <Fade key={i} top duration={600} delay={i * 100}>
                 <Card {...CardProps} key={i}>
-                  <Icon {...CardIconProps} {...item.IconProps} />
+                  <div style={{ display: "flex", justifyContent: "center" }}>
+                    <Icon {...CardIconProps} {...item.IconProps} />
+                  </div>
 
                   <Typography {...CardTitleProps}>{item.title}</Typography>
                   <Typography {...CardTextProps}>{item.text}</Typography>
                   <Link href={item.CtaTo} passHref>
-                    <div style={{ margin: "25px 0px" }}>
+                    <div
+                      style={{
+                        margin: "25px 0px",
+                        display: "flex",
+                        justifyContent: "center",
+                      }}
+                    >
                       <Button variant="brand" size="small">
                         {item.CtaText}
                       </Button>

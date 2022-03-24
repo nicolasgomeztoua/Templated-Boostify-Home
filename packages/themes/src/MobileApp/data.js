@@ -96,7 +96,7 @@ export default {
       title: "What is Apex Legends Ranked Boosting?",
 
       CtaTo: "/rank-boosting",
-      CtaText: "Buy Apex Legends Rank Boosting",
+      CtaText: "Buy Rank Boosting",
 
       text:
         "In Ranked you drop against 19 other teams. You earn RP (Ranked Points) for successful matches and you climb up in Ranked. Your highest tier is shown to friends and other players, determening your prestige. Ranked Boosting is the best way to get your rank. We will grind on your account or one of our pros will squad up with you!",
@@ -128,7 +128,7 @@ export default {
       },
       title: "What is Badge Boosting?",
       CtaTo: "/acheivement-badges",
-      CtaText: "Buy Apex Legends Badge Boosting",
+      CtaText: "Buy Badge Boosting",
       text:
         "In Apex Legends, exceptional achievements are rewarded with badges to illustrate on your banner. Plant fear into your enemies before the match even starts with our badge boosting service! Choose from any of the of badges available in our badge boosting section and our pros will hop on and shred.",
       list: [
@@ -163,7 +163,7 @@ export default {
           },
           title: "Arenas Boost",
           CtaTo: "/Arenas-Boost",
-          CtaText: "Buy Apex Legends Arenas Boosting",
+          CtaText: "Buy Arenas Boosting",
           text:
             "Get the Arenas Points boost you need to acheive the rank you desire.",
         },
@@ -174,7 +174,7 @@ export default {
           },
           title: "Kills Boost",
           CtaTo: "/kills-boosting",
-          CtaText: "Buy Apex Legends Kills Boosting",
+          CtaText: "Buy Kills Boosting",
 
           text:
             "Deck out your banner with a high kill count! Get your desired kills with our killsboost service.",

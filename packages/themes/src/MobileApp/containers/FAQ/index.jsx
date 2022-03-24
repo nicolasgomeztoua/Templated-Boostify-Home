@@ -16,7 +16,6 @@ import Icon from "@pagerland/common/src/components/Icon";
 
 import Img from "@pagerland/common/src/components/Img";
 
-
 import data from "../../data";
 
 const FAQ = ({
@@ -40,7 +39,7 @@ const FAQ = ({
   <Box {...WrapperProps}>
     <Container {...ContainerProps} name={name}>
       <Box {...InnerProps}>
-        <Box {...LiquidProps} >
+        <Box {...LiquidProps}>
           <Reveal ssrReveal ssrFadeout effect="liquid" duration={600}>
             <Img alt={title} src={image} />
           </Reveal>
@@ -170,7 +169,7 @@ FAQ.defaultProps = {
   WrapperProps: {
     overflow: "hidden",
     mt: -30,
-    pt: 30,
+    pt: 60,
     pb: 60,
     mb: -60,
   },

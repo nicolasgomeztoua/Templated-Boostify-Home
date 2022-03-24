@@ -35,11 +35,11 @@ const RealEstate = ({ url }) => (
     <About name="about" />
 
     <Features name="features" />
-    <Screenshots name="screenshots" />
+    <Offer name="offer" /> 
     <Location name="location" />
     <Team name="team" />
-    <FAQ name="faq" />
-    <Offer name="offer" />
+    <Screenshots name="screenshots" />
+   <FAQ name="faq" />
   </Theme>
 );
 

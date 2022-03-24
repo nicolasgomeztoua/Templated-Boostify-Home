@@ -110,7 +110,7 @@ const Feature = ({
                   <Typography {...CardTextProps}>{item.text}</Typography>
                   <Link href={item.CtaTo} passHref>
                     <div style={{ margin: "25px 0px" }}>
-                      <Button variant="brand" size="large">
+                      <Button variant="brand" size="small">
                         {item.CtaText}
                       </Button>
                     </div>

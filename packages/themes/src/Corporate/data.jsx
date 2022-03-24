@@ -6,9 +6,10 @@ import booster1 from "./assets/avatars/booster1.webp";
 import booster2 from "./assets/avatars/booster2.webp";
 import booster3 from "./assets/avatars/booster3.webp";
 import booster4 from "./assets/avatars/booster4.webp";
-import Consulting from './assets/consulting.svg';
-import Auditing from './assets/auditing.svg';
-import Strategy from './assets/strategy.svg';
+import RankBoost from "./assets/RankBoost.png";
+
+import Cart from "./assets/Cart.png";
+import Profile from "./assets/Profile.png";
 
 export default {
   title: "Corporate",
@@ -46,25 +47,25 @@ export default {
   },
   offer: {
     subtitle: "What we do",
-    title: "Our offer",
+    title: "How does this work?",
     services: [
       {
-        icon: Consulting,
-        title: "Consulting",
+        icon: RankBoost,
+        title: "Choose your boost!",
         text:
-          "Proin sed pharetra ligula. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.",
+          "Customize your order to your needs. Pick and choose from any of our extras and options. Browse through our BR ranked, arenas ranked, and badge boosting services for a personalized boosting experience.",
       },
       {
-        icon: Auditing,
-        title: "Auditing",
+        icon: Cart,
+        title: "Checkout Safely",
         text:
-          "Proin sed pharetra ligula. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.",
+          "We do NOT collect any data during checkout process, it is all handled securely by stripe or paypal. Our boosters will only have access to your account during boosting. After which the info is encrypted again. ",
       },
       {
-        icon: Strategy,
-        title: "Strategy",
+        icon: Profile,
+        title: "Sit Back, Relax",
         text:
-          "Proin sed pharetra ligula. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.",
+          "And track your order step by step in our profile page! You can login with google or discord for easy access! You will also receive updates via email, and we are working on a live chat with the booster right on the platform! In the meantime, you can communicate any concerns via support chat and discord.",
       },
     ],
   },

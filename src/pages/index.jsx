@@ -18,8 +18,8 @@ import {
 import preview from "@pagerland/themes/src/RealEstate/assets/preview.jpg";
 
 import Team from "@pagerland/themes/src/Corporate/containers/Team";
-import SEO from "../components/SEO";
 import Offer from "@pagerland/themes/src/Corporate/containers/Offer";
+import SEO from "../components/SEO";
 
 const RealEstate = ({ url }) => (
   <Theme>

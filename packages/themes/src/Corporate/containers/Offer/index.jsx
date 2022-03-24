@@ -1,14 +1,14 @@
-import React from 'react';
-import PropTypes from 'prop-types';
+import React from "react";
+import PropTypes from "prop-types";
 
-import Box from '@pagerland/common/src/components/Box';
-import Fade from 'react-reveal/Fade';
-import Typography from '@pagerland/common/src/components/Typography';
-import Container from '@pagerland/common/src/components/Container';
-import Grid from '@pagerland/common/src/components/Grid';
-import Img from '@pagerland/common/src/components/Img';
+import Box from "@pagerland/common/src/components/Box";
+import Fade from "react-reveal/Fade";
+import Typography from "@pagerland/common/src/components/Typography";
+import Container from "@pagerland/common/src/components/Container";
+import Grid from "@pagerland/common/src/components/Grid";
+import Img from "@pagerland/common/src/components/Img";
 
-import data from '../../data';
+import data from "../../data";
 
 const Offer = ({
   name,
@@ -73,7 +73,7 @@ Offer.propTypes = {
       icon: PropTypes.string,
       title: PropTypes.node,
       text: PropTypes.node,
-    }),
+    })
   ),
 };
 
@@ -91,25 +91,25 @@ Offer.defaultProps = {
     },
   },
   ContainerProps: {
-    textAlign: 'center',
+    textAlign: "center",
   },
   CaptionProps: {
     mb: 5,
   },
   SubtitleProps: {
-    as: 'h3',
-    variant: 'h5',
-    color: 'brand',
+    as: "h3",
+    variant: "h5",
+    color: "brand",
   },
   TitleProps: {
-    as: 'h2',
-    variant: 'h2',
-    color: 'invert',
+    as: "h2",
+    variant: "h2",
+    color: "invert",
     mb: 3,
-    textAlign: 'center',
+    textAlign: "center",
   },
   TextProps: {
-    color: 'text',
+    color: "text",
     mb: {
       _: 4,
       lg: 96,
@@ -117,29 +117,31 @@ Offer.defaultProps = {
   },
   GridProps: {
     gridTemplateColumns: {
-      _: '1fr',
-      lg: 'repeat(3, 1fr)',
+      _: "1fr",
+      lg: "repeat(3, 1fr)",
     },
-    gridGap: '64px',
+    gridGap: "64px",
     maxWidth: 1088,
-    mx: 'auto',
+    mx: "auto",
     mb: 5,
   },
   ServiceIconProps: {
-    display: 'block',
-    mx: 'auto',
+    display: "block",
+
+    maxHeight: "500px",
+    mx: "auto",
     mb: 4,
   },
   ServiceTitleProps: {
-    textAlign: 'center',
-    as: 'h3',
-    color: 'invert',
-    variant: 'h5',
+    textAlign: "center",
+    as: "h3",
+    color: "invert",
+    variant: "h5",
     mb: 3,
   },
   ServiceTextProps: {
-    color: 'text',
-    textAlign: 'center',
+    color: "text",
+    textAlign: "center",
   },
   ...data.offer,
 };

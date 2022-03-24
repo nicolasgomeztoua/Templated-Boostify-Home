@@ -34,9 +34,9 @@ const RealEstate = ({ url }) => (
     <Welcome name="welcome" />
     <About name="about" />
 
-    <Offer name="offer" /> 
-    <Features name="features" />
+    <Offer name="offer" />
     <Location name="location" />
+    <Features name="features" />
     <Team name="team" />
     <Screenshots name="screenshots" />
    <FAQ name="faq" />

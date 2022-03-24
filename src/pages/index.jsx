@@ -32,10 +32,10 @@ const RealEstate = ({ url }) => (
 
     <Navbar />
     <Welcome name="welcome" />
-    <About name="about" />
-
-    <Offer name="offer" />
     <Location name="location" />
+
+    <About name="about" />
+    <Offer name="offer" />
     <Features name="features" />
     <Team name="team" />
     <Screenshots name="screenshots" />
